@@ -1,2 +1,10 @@
 <!--pages/home/home.wxml-->
 <view>我是主页</view>
+
+<view class="txt">WXML和js文件配合，最终输出到DOM，这就是双线程模型</view>
+<view class="txt">this.setData()方法执行时，这里的msg会产生一个新的js对象，然后跟老的js对象进行diff差异对比算法</view>
+
+<view>------------------</view>
+<view>{{msg}}</view>
+<button size="mini" bind:tap="onClick1">点击1</button>
+<button size="mini" bindtap="onClick2">点击2</button>
