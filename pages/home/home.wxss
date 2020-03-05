@@ -1,1 +1,17 @@
 /* pages/home/home.wxss */
+
+.box1 {
+  background-color: yellow;
+}
+
+.box2 {
+  background-color: cornsilk;
+}
+
+.txt1 {
+  color: green;
+}
+
+.txt2 {
+  color: red;
+}

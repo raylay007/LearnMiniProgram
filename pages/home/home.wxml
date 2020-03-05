@@ -1,2 +1,18 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="txt1">小程序初体验</view>
+<view class="txt2">注释：Ctrl K Ctrl C 反注释： Ctrl K Ctrl U </view>
+
+<!--双括号：Mustache语法-->
+
+<view>{{name}} : {{age}}</view>
+
+<view class="box1" wx:for="{{students}}"> 学生Id: {{item.id}}，姓名： {{item.name}} 年龄： {{item.age}}</view>
+
+<view>当前计数 : {{counter}}</view>
+
+<view>
+  <button class="box1" size='mini' bindtap="onClickAdd">+</button>
+</view>
+<view>
+  <button class="box1" size='mini' bindtap="onClickSub">-</button>
+</view>
