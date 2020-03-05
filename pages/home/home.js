@@ -29,6 +29,7 @@ Page({
       },
     ],
     counter: 0,
+    introduce:"注释：Ctrl K Ctrl C （CTRL + /） 反注释： Ctrl K Ctrl U "
   },
   onClickAdd() {
 
