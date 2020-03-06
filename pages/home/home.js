@@ -1,66 +1,55 @@
 // pages/home/home.js
+
+const app = getApp();
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    des: "",
+    isLoad: true
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onLoad() {
+    console.log(app.golobalData.appName)
+    console.log(app.golobalData.appId)
 
+    const _this = this;
+
+    wx.request({
+      url: 'http://123.207.32.32:8000/recommend',
+      //三种写法
+      // success(res) {
+      //   // console.log(res)
+
+      //   const data = res.data
+      //   console.log(data)
+      //   console.log(this)
+      //   _this.setData({
+      //     des: data.最新动态
+      //   })
+      // }
+
+      success: (res) => {
+        // console.log(res)
+        const data = res.data
+        this.setData({
+          des: data.最新动态
+        })
+      }
+
+      // success: function(res){
+      //   console.log(res)
+      // }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onContact(e) {
+    console.log(e)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleGetUserInfo(e) { //ES6对象增强写法
+    console.log(e)
+    console.log(e.detail)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleGetPhoneNumber(e) {
+    console.log(e)
   }
 })

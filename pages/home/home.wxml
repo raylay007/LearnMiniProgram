@@ -1,2 +1,30 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+<!-- <button size="mini" bindtap="onClickGetUserInfo" open-type="getUserInfo">获取用户信息</button> -->
+
+<open-data type="userNickName"></open-data>
+<!-- <open-data type="userAvatarUrl"></open-data> -->
+<button bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo">获取授权</button>
+
+<button bindgetphonenumber="handleGetPhoneNumber" open-type="getPhoneNumber">获取手机号</button>
+
+<button open-type="contact" bindcontact="onContact">客服会话</button>
+<button open-type="share">分享</button>
+
+<view>{{des}}</view>
+
+<text>hello world\n</text>
+<text space="nbsp">hello world\n</text>
+<text space="ensp">hello world\n</text>
+<text space="emsp">hello world\n</text>
+<text decode = "{{true}}">5 &gt; 3 \n</text>
+<text selectable>你好小程序\n</text>
+
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" plain>按钮</button>
+<button size="mini" disabled>按钮</button>
+<button size="mini" loading = "{{isLoad}}">按钮</button>
+
+<button hover-class="pressed">按钮</button>
