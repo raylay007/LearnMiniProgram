@@ -1,0 +1,30 @@
+<!--pages/wxss/wxss.wxml-->
+
+<view class="content" style="background:yellow;">哈哈</view>
+
+<view>-------Block包裹-------</view>
+
+<block wx:for='{{3}}'>
+  <button size="mini">按键</button>
+  <view>哈哈</view>
+</block>
+
+
+<!-- 这样写，性能不好 -->
+<!-- <view wx:for="{{3}}">
+  <button size="mini">按键</button>
+  <view>哈哈</view>
+</view> -->
+
+<view>-------模板使用-------</view>
+
+<!-- <template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+
+<import src = "/wxml/template.wxml"/>
+
+<template is="contentItem" data="{{btnText:'点击1' , content:'呵呵'}}" />
+<template is="contentItem" data="{{btnText:'点击2' , content:'嘿嘿'}}" />
+<template is="contentItem" data="{{btnText:'点击3' , content:'嘻嘻'}}" />

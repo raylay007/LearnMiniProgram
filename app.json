@@ -1,6 +1,10 @@
 {
   "pages": [
+    "pages/wxs/wxs",
     "pages/home/home",
+    "pages/wxss/wxss",
+    "pages/image/image",
+    "pages/view/view",
     "pages/about/about"
   ],
   "window": {

@@ -1,0 +1,11 @@
+<!--pages/image/image.wxml-->
+
+<image src="/assets/popular_bg.jpg"></image>
+<image src="../../assets/popular_bg.jpg"></image>
+
+<button bindtap="onSlelectPic">选择图片</button>
+
+<image src="{{imagePath}}"/>
+
+
+<!--  -->

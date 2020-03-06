@@ -1,0 +1,5 @@
+/* pages/wxss/wxss.wxss */
+
+.content{
+  background: red !important
+}

@@ -1,2 +1,6 @@
 <!--pages/home/home.wxml-->
+
+<include src='/wxml/header.wxml' />
 <text>pages/home/home.wxml</text>
+
+<include src='/wxml/footer.wxml' />
